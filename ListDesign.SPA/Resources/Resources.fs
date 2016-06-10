@@ -15,6 +15,14 @@ module Resources =
         do()
         
     module SimpleUI =
+        type Css() =
+            inherit BaseResource("simple_ui.css")
+        type Js() =
+            inherit BaseResource("simple_ui.js")
+
         [<assembly:System.Web.UI.WebResource("simple_ui.css", "text/css");
-          assembly:System.Web.UI.WebResource("simple_ui.js", "text/javascript")>]
+          assembly:System.Web.UI.WebResource("simple_ui.js", "text/javascript");
+          
+          assembly:Require(typeof<Css>);
+          assembly:Require(typeof<Js>)>]
         do()
