@@ -49,6 +49,7 @@
     <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.woff2" />
     <EmbeddedResource Include="Resources\css\simple_ui.css" />
     <EmbeddedResource Include="Resources\js\simple_ui.js" />
+    <EmbeddedResource Include="Resources\js\simple_ui2.js" />
     <Compile Include="Resources\Resources.fs" />
     <None Include="Templates\template-card.html" />
     <None Include="Templates\template-nav.html" />
