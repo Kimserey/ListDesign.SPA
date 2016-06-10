@@ -49,10 +49,11 @@
     <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.woff2" />
     <EmbeddedResource Include="Resources\css\simple_ui.css" />
     <EmbeddedResource Include="Resources\js\simple_ui.js" />
+    <Compile Include="Resources\Resources.fs" />
     <None Include="Templates\template-card.html" />
     <None Include="Templates\template-nav.html" />
     <None Include="Templates\template-table.html" />
-    <Compile Include="Templates.fs" />
+    <Compile Include="Templates\Templates.fs" />
     <Compile Include="Client.fs" />
     <Content Include="index.html" />
     <Content Include="Web.config" />

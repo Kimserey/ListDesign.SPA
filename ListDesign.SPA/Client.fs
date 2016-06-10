@@ -10,6 +10,14 @@ open WebSharper.UI.Next.Html
 [<JavaScript>]
 module Client =
     
-    let main() =
-        Templates.Index.Doc("Expenses", [ text "Hello world" ])
-        |> Doc.RunById "main"
+    let nav = 
+        Templates.Nav.Doc(
+            "Expenses", 
+            "List design", 
+            [ Templates.Nav.ListItem.Doc("Expenses", [ a [ text "1" ]; a [ text "2" ] ])
+              Templates.Nav.ListItem.Doc("Dates", [ a [ text "1" ]; a [ text "2" ] ]) ])
+        |> Doc.RunById "nav"
+
+    let content =
+        Templates.Card.Doc()
+        |> Doc.RunById "content"
