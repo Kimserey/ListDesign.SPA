@@ -9,15 +9,20 @@ open WebSharper.UI.Next.Html
 
 [<JavaScript>]
 module Client =
-    
+
     let nav = 
-        Templates.Nav.Doc(
+        Nav.Doc(
             "Expenses", 
             "List design", 
-            [ Templates.Nav.ListItem.Doc("Expenses", [ a [ text "1" ]; a [ text "2" ] ])
-              Templates.Nav.ListItem.Doc("Dates", [ a [ text "1" ]; a [ text "2" ] ]) ])
+            [ Nav.Category.Doc("Expenses", [ a [ text "1" ]; a [ text "2" ] ])
+              Nav.Category.Doc("Dates", [ a [ text "1" ]; a [ text "2" ] ]) ])
         |> Doc.RunById "nav"
 
     let content =
-        Templates.Card.Doc()
+        Templates.Card.Doc(
+            "firstContent", 
+            [ Card.Header.Doc("Supermarket", "20.00") ],
+            [ Table.Doc([ Table.Header.Doc("", "Date")
+                          Table.Header.Doc("amount", "Amount") ],
+                        [ ]) ])
         |> Doc.RunById "content"
