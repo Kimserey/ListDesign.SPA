@@ -41,12 +41,23 @@
     <WarningLevel>3</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\fonts\FontAwesome.otf" />
+    <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.eot" />
+    <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.svg" />
+    <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.ttf" />
+    <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.woff" />
+    <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.woff2" />
+    <EmbeddedResource Include="Resources\css\simple_ui.css" />
+    <EmbeddedResource Include="Resources\js\simple_ui.js" />
+    <None Include="Templates\template-card.html" />
+    <None Include="Templates\template-nav.html" />
+    <None Include="Templates\template-table.html" />
+    <Compile Include="Templates.fs" />
     <Compile Include="Client.fs" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
     <Compile Include="Global.asax.fs" />
-    <None Include="Setup.fsx" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

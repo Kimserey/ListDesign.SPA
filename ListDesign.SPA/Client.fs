@@ -5,32 +5,11 @@ open WebSharper.JavaScript
 open WebSharper.JQuery
 open WebSharper.UI.Next
 open WebSharper.UI.Next.Client
+open WebSharper.UI.Next.Html
 
 [<JavaScript>]
-module Client =    
-    type IndexTemplate = Templating.Template<"index.html">
-
-    let People =
-        ListModel.FromSeq [
-            "John"
-            "Paul"
-        ]
-
-    let Main =
-        JQuery.Of("#main").Empty().Ignore
-
-        let newName = Var.Create ""
-
-        IndexTemplate.Main.Doc(
-            ListContainer = [
-                People.View.DocSeqCached(fun name ->
-                    IndexTemplate.ListItem.Doc(Name = View.Const name)
-                )
-            ],
-            Name = newName,
-            Add = (fun el ev ->
-                People.Add(newName.Value)
-                newName.Value <- ""
-            )
-        )
+module Client =
+    
+    let main() =
+        Templates.Index.Doc("Expenses", [ text "Hello world" ])
         |> Doc.RunById "main"
